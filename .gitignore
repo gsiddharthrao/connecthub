@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+
+# Build artifacts
+dist/
+build/
+
+# Media uploads (preserve .gitkeep)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Test coverage
+coverage/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Agent orchestration artifacts
+.agents/

@@ -1,0 +1,20 @@
+{
+  "name": "connecthub-monorepo",
+  "version": "1.0.0",
+  "description": "ConnectHub - Full-Stack Professional Networking Platform Monorepo",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "seed": "npm --prefix server run seed",
+    "build": "npm --prefix server run build && npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "test:verbose": "npm --prefix server test -- --verbose",
+    "client:build": "npm --prefix client run build",
+    "server:test": "npm --prefix server test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  }
+}
